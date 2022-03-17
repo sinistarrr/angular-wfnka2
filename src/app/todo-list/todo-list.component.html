@@ -1,0 +1,9 @@
+<app-todo-item
+  *ngFor="let todo of todos"
+  [tache]="todo"
+  (todoUpdatedEvent)="notifyUserTodoUpdated($event)"
+>
+</app-todo-item>
+
+<input type="text" [(ngModel)]="inputValue" />
+<button (click)="addTodoItem()">Add</button>
